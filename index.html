@@ -93,34 +93,7 @@
 
     /*---------------------------- Example initializations Javascript version ----------------------------*/
     new WebCodeCamJS("canvas").init(arg);
-    /* OR */
-    var canvas = document.querySelector('#webcodecam-canvas');
-    new WebCodeCamJS(canvas).init();
-    /* OR */
-    new WebCodeCamJS('#webcodecam-canvas').init();
-
-    /*------------------------ Example initializations jquery & Javascript version ------------------------*/
-    var decoder = new WebCodeCamJS('#webcodecam-canvas');
-
-    var decoder = $("#webcodecam-canvas").WebCodeCamJQuery(args).data().plugin_WebCodeCamJQuery;
-
-    decoder.buildSelectMenu('#camera-select', sel); //sel : default camera optional
-    /* Chrome & MS Edge: build select menu
-    *  Firefox: the default camera initializes, return decoder object 
-    */
-    //simple initialization
-    decoder.init();
-    /* Select environment camera if available */
-    decoder.buildSelectMenu('#camera-select', 'environment|back').init(args);
-    /* Select user camera if available */
-    decoder.buildSelectMenu('#camera-select', 'user|front').init(args);
-    /* Select camera by name */
-    decoder.buildSelectMenu('#camera-select', 'facecam').init(args);
-    /* Select first camera */
-    decoder.buildSelectMenu('#camera-select', 0).init(args);
-    /* Select environment camera if available, without visible select menu*/
-    decoder.buildSelectMenu(document.createElement('select'), 'environment|back').init().play();   
-
+    
     /* --------------------------------------- Available Functions: ----------------------------------------*/
     /* camera stop & delete stream */
     decoder.stop();
