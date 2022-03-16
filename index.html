@@ -67,11 +67,11 @@
         threshold: 0,                           // int 
         sharpness: [],      // to On declare matrix, example for sharpness ->  [0, -1, 0, -1, 5, -1, 0, -1, 0]
         resultFunction: function(result) {
-            /*
+     
                 result.format: code format,
                 result.code: decoded string,
                 result.imgData: decoded image data
-            */
+        
             alert(result.code);
         },
         cameraSuccess: function(stream) {           //callback funtion to camera success
