@@ -7,18 +7,15 @@
     <body>
         <h3>Simple initialization with default settings</h3>
         <hr>
-      
-        <canvas id="webcodecam-canvas" ></canvas>
+        <canvas></canvas>
         <hr>
         <ul></ul>
-        <script type="text/javascript" src="js/qrcodelib.js"></script>
-        <script type="text/javascript" src="js/webcodecamjs.js"></script>
-        
-            /* Using jquery version: */
+
+
             <script type="text/javascript" src="js/jquery.js"></script>
             <script type="text/javascript" src="js/qrcodelib.js"></script>
             <script type="text/javascript" src="js/webcodecamjquery.js"></script>
-       
+
         <script type="text/javascript">
             var txt = "innerText" in HTMLElement.prototype ? "innerText" : "textContent";
             var arg = {
@@ -34,15 +31,16 @@
                 }
             };
 
+
+
     /*------------------------ Example initializations jquery & Javascript version ------------------------*/
     var decoder = new WebCodeCamJS('#webcodecam-canvas');
 
-    var decoder = $("#webcodecam-canvas").WebCodeCamJQuery().data().plugin_WebCodeCamJQuery;
+    var decoder = $("#webcodecam-canvas").WebCodeCamJQuery(args).data().plugin_WebCodeCamJQuery;
 
-    decoder.buildSelectMenu('#camera-select'); 
+
     /* Select environment camera if available, without visible select menu*/
     decoder.buildSelectMenu(document.createElement('select'), 'environment|back').init().play();   
-
 
         </script>
     </body>
