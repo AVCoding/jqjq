@@ -19,7 +19,13 @@
 
         <script type="text/javascript">
             var txt = "innerText" in HTMLElement.prototype ? "innerText" : "textContent";
-            var arg = {
+       
+
+
+
+    /*------------------------ Example initializations jquery & Javascript version ------------------------*/
+    var decoder = new WebCodeCamJS('#webcodecam-canvas');
+                 var arg = {
                 resultFunction: function(result) {
                     /*
                         result.format: code format,
@@ -31,11 +37,6 @@
                     document.querySelector('body').appendChild(aChild);
                 }
             };
-
-
-
-    /*------------------------ Example initializations jquery & Javascript version ------------------------*/
-    var decoder = new WebCodeCamJS('#webcodecam-canvas');
 
     var decoder = $("#webcodecam-canvas").WebCodeCamJQuery(args).data().plugin_WebCodeCamJQuery;
 
