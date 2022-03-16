@@ -8,13 +8,13 @@
         <h3>Simple initialization with default settings</h3>
         <hr>
       
-        <canvas id="ebcodecam-canvas" ></canvas>
+        <canvas id="webcodecam-canvas" ></canvas>
         <hr>
         <ul></ul>
         <script type="text/javascript" src="js/qrcodelib.js"></script>
         <script type="text/javascript" src="js/webcodecamjs.js"></script>
         
-            Using jquery version:
+            /* Using jquery version: */
             <script type="text/javascript" src="js/jquery.js"></script>
             <script type="text/javascript" src="js/qrcodelib.js"></script>
             <script type="text/javascript" src="js/webcodecamjquery.js"></script>
@@ -34,64 +34,7 @@
                 }
             };
     /* -------------------------------------- Available parameters --------------------------------------*/
-    var options = {
-        DecodeQRCodeRate: 5,                    // null to disable OR int > 0 !
-        DecodeBarCodeRate: 5,                   // null to disable OR int > 0 !
-        successTimeout: 500,                    // delay time when decoding is succeed
-        codeRepetition: true,                   // accept code repetition true or false
-        tryVertical: true,                      // try decoding vertically positioned barcode true or false
-        frameRate: 15,                          // 1 - 25
-        width: 320,                             // canvas width
-        height: 240,                            // canvas height
-        constraints: {                          // default constraints
-            video: {
-                mandatory: {
-                    maxWidth: 1280,
-                    maxHeight: 720
-                },
-                optional: [{
-                    sourceId: true
-                }]
-            },
-            audio: false
-        },
-        flipVertical: false,                    // boolean
-        flipHorizontal: false,                  // boolean
-        zoom: -1,                               // if zoom = -1, auto zoom for optimal resolution else int
-        beep: 'audio/beep.mp3',                 // string, audio file location
-        decoderWorker: 'js/DecoderWorker.js',   // string, DecoderWorker file location
-        brightness: 0,                          // int
-        autoBrightnessValue: false,             // functional when value autoBrightnessValue is int
-        grayScale: false,                       // boolean
-        contrast: 0,                            // int
-        threshold: 0,                           // int 
-        sharpness: [],      // to On declare matrix, example for sharpness ->  [0, -1, 0, -1, 5, -1, 0, -1, 0]
-        resultFunction: function(result) {
-     
-                result.format: code format,
-                result.code: decoded string,
-                result.imgData: decoded image data
-        
-            alert(result.code);
-        },
-        cameraSuccess: function(stream) {           //callback funtion to camera success
-            console.log('cameraSuccess');
-        },
-        canPlayFunction: function() {               //callback funtion to can play
-            console.log('canPlayFunction');
-        },
-        getDevicesError: function(error) {          //callback funtion to get Devices error
-            console.log(error);
-        },
-        getUserMediaError: function(error) {        //callback funtion to get usermedia error
-            console.log(error);
-        },
-        cameraError: function(error) {              //callback funtion to camera error  
-            console.log(error);
-        }
-    };
-
-
+   
     /*------------------------ Example initializations jquery & Javascript version ------------------------*/
     var decoder = new WebCodeCamJS('#webcodecam-canvas');
 
